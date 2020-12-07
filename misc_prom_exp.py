@@ -21,7 +21,7 @@ def my_app(environ, start_fn):
         p = re.compile('temp=(.*)\'C')
         m = p.match(temp_response.decode(encoding='UTF-8'))
         temp_output = 'main_temp ' + m.group(1)
-        string_output = temp_output + "\ntestval 123" + "\nsystem " + platform.system() + "-" + platform.machine()
+        string_output = temp_output
         byte_output = string_output.encode(encoding='UTF-8')
         return [byte_output]
     elif environ['PATH_INFO'] == '/favicon.ico':
