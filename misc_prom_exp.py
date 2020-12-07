@@ -20,7 +20,7 @@ def my_app(environ, start_fn):
             temp_response = subprocess.check_output([temp_command, temp_arg1])
         p = re.compile('temp=(.*)\'C')
         m = p.match(temp_response.decode(encoding='UTF-8'))
-        temp_output = 'main_temp ' + m.group(1) + "\nwifes 1"
+        temp_output = 'main_temp ' + m.group(1)
         string_output = temp_output
         byte_output = string_output.encode(encoding='UTF-8')
         return [byte_output]
