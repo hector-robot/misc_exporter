@@ -1,4 +1,4 @@
-#!/usr/bin/env pyton3
+#!/usr/bin/env python3
 from prometheus_client import make_wsgi_app
 from wsgiref.simple_server import make_server
 import subprocess
